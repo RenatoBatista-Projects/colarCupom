@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="pt-BR">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificação de Código</title>
+    <title>Verificação de Cupom</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,10 +48,19 @@
     <div id="container">
         <h1>Verificação de Código</h1>
         <label for="codigo">Digite o código:</label>
-        <input type="text" id="codigo" >
+        <input type="text" id="codigo">
         <button onclick="verificarCodigo()">Verificar</button>
     </div>
 
-   
+    <script>
+        function verificarCodigo() {
+            var codigoInserido = document.getElementById("codigo").value;
+            if (codigoInserido === "718D-9GE3-545A-89IK") {
+                window.location.href = "https://docs.google.com/presentation/d/1nuiOHal0BJicw2g-FahlSk866CWW94um8Fa_F_PqAhA/edit?usp=sharing";
+            } else {
+                alert("Cupom incorreto. Tente novamente.");
+            }
+        }
+    </script>
 </body>
 </html>
